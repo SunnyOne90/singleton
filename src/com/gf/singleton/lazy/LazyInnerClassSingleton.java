@@ -14,6 +14,9 @@ public class LazyInnerClassSingleton {
         return singleton;
     }
     private static class SingletonCreate{
+        private SingletonCreate(){
+            System.out.println("SingletonCreate");
+        }
         private static final LazyInnerClassSingleton singleton = new LazyInnerClassSingleton();
     }
 
